@@ -7,7 +7,11 @@
  *    hobbies
  */
 
-
+let hobbies = ['swimming', 'woodworking', 'board games', 'reading', 'painting'];
+for (let i of hobbies){
+     console.log(i)
+};
+console.log(hobbies.length);
 // Example output
 // 1. swimming
 // 2. board games
@@ -26,6 +30,15 @@
  */
 
 
+let colors = ['teal', 'orange', 'red', 'teal', 'blue', 'purple'];
+let tealCount = 0;
+for (let i of colors){
+     if (i === 'teal'){
+          tealCount++;
+     }
+};
+console.log(`Teal was found ${tealCount} times`);
+
 // Example output
 // green, red, teal, orange, teal
 // Teal was found 2 times
@@ -41,7 +54,19 @@
  * 4. Output the original array, odd number array and even number array
  */
 
-
+let nums = [2, 4, 5, 17, 9, 12];
+let oddNumbers = [];
+let evenNumbers = [];
+for (let i =0; i< nums.length; i++){
+     if (nums[i] %2 ===0){
+          evenNumbers.push(nums[i]);
+     } else {
+          oddNumbers.push(nums[i]);
+     }
+};
+console.log(nums);
+console.log(oddNumbers);
+console.log(evenNumbers);
 // Example output
 // 3, 7, 2, 8, 11, 4, 2
 // Odd 3, 7, 11
@@ -62,6 +87,14 @@
 // true, false, true, true
 // Toggled false, true, false, false
 
+let switches = [true, true, false, true, false, false];
+let toggled = [];
+
+for (let i = 0; i < switches.length; i++){
+          toggled.push(!switches[i]);
+};
+console.log(switches);
+console.log(toggled);
 
 /**
  * #5 (STRETCH) Remove 0's
@@ -74,8 +107,12 @@
  *
  * Hint: Try using a while loop for this one.
  */
-
-
+let numbers = [0, 4, 6, 2, 0, 5, 0, 0, 0, 0];
+while (numbers[numbers.length-1]===0){
+     numbers.pop();
+     console.log(numbers);
+}
+console.log(numbers);
 // Example output
 // Before loop 3, 0, 2, 8, 0, 0, 0
 // After loop 3, 0, 2, 8
@@ -91,7 +128,20 @@
  * 3. Log the highest and lowest number to the console
  */
 
+let newNums = [4, 56, 32, -4, 8, 12, -63, 87, 44, -9];
+let high = newNums[0];
+let low = newNums[0];
 
+for (let i of newNums){
+     if (i > high){
+          high = i;
+     } else if (i < low){
+          low = i;
+     }
+}
+console.log(newNums);
+console.log(high);
+console.log(low);
 // Example output
 // 2, 2, -3, 7, 4, 1, 7, 12, 8
 // High: 12
